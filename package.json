@@ -1,0 +1,27 @@
+{
+  "name": "express-clean-arch",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc -p ./tsconfig.json",
+    "start": "node ./dist/app/main.js",
+    "dev": "tsx watch ./src/app/main.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.6.1",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "fastify": "^5.6.1",
+    "sqlite3": "^5.1.7",
+    "tsx": "^4.20.6",
+    "typeorm": "^0.3.27"
+  }
+}
