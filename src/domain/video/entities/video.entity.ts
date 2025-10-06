@@ -6,6 +6,7 @@ export interface VideoProps {
   title: string;
   subtitle: string;
   likes: number;
+  url: string;
 }
 
 export class Video {
@@ -13,8 +14,8 @@ export class Video {
     this.validate();
   }
 
-  public static create(props: Omit<VideoProps, "id" | "likes">) {
-    return new Video({ ...props, id: randomUUID(), likes: 0 });
+  public static create(props: Omit<VideoProps, "id" | "likes" | "url">) {
+    return new Video({ ...props, id: randomUUID(), likes: 0, url: "" });
   }
 
   public static with(props: VideoProps) {
@@ -51,6 +52,14 @@ export class Video {
 
   public get likes() {
     return this.props.likes;
+  }
+
+  public get url() {
+    return this.props.url;
+  }
+
+  public set url(url: string) {
+    this.props.url = url;
   }
 
   public increaseLikeCount() {
