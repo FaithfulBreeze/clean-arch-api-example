@@ -1,7 +1,7 @@
-import { VideoRepository } from "../../domain/video/repository/video-repository";
-import { Video } from "../../domain/video/entities/video.entity";
-import { UseCase } from "../use-case";
-import { NotFoundException } from "../exceptions/not-found.exception";
+import { VideoRepository } from "@domain/video/repository/video-repository";
+import { Video } from "@domain/video/entities/video.entity";
+import { UseCase } from "@application/use-cases/use-case";
+import { NotFoundException } from "@application/use-cases/exceptions/not-found.exception";
 
 export type TFindVideoByIdUseCaseInputDto = {
   id: string;

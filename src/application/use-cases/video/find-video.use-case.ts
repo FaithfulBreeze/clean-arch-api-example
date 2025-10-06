@@ -1,6 +1,6 @@
-import { Video } from "../../domain/video/entities/video.entity";
-import { VideoRepository } from "../../domain/video/repository/video-repository";
-import { UseCase } from "../use-case";
+import { Video } from "@domain/video/entities/video.entity";
+import { VideoRepository } from "@domain/video/repository/video-repository";
+import { UseCase } from "@application/use-cases/use-case";
 
 export type TFindVideoUseCaseInputDto = unknown;
 

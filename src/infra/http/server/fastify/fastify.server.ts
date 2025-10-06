@@ -1,9 +1,9 @@
-import { HttpExceptionMapper } from "../../../../presentation/http/exceptions/http-exception.mapper";
-import { Controller } from "../../../../presentation/http/controller";
-import { Server } from "../server";
+import { HttpExceptionMapper } from "@presentation/http/exceptions/http-exception.mapper";
+import { Controller } from "@presentation/http/controller";
+import { Server } from "@infra/http/server/server";
 import Fastify, { FastifyInstance } from "fastify";
-import { DomainException } from "../../../../domain/exceptions/domain.exception";
-import { ApplicationException } from "../../../../use-cases/exceptions/application.exception";
+import { DomainException } from "@domain/exceptions/domain.exception";
+import { ApplicationException } from "@application/use-cases/exceptions/application.exception";
 
 export class FastifyServer implements Server {
   private app: FastifyInstance;

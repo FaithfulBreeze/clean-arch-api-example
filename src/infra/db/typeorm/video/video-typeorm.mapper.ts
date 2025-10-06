@@ -1,5 +1,5 @@
-import { Video } from "../../../../domain/video/entities/video.entity";
-import { VideoTypeormEntity } from "./video-typeorm.entity";
+import { Video } from "@domain/video/entities/video.entity";
+import { VideoTypeormEntity } from "@infra/db/typeorm/video/video-typeorm.entity";
 
 export class VideoTypeormMapper {
   static toTypeorm(video: Video): VideoTypeormEntity {

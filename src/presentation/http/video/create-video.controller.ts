@@ -1,8 +1,8 @@
 import {
   TCreateVideoUseCaseInputDto,
   TCreateVideoUseCaseOutputDto,
-} from "../../../use-cases/video/create-video.use-case";
-import { Controller, ControllerProps } from "../controller";
+} from "@application/use-cases/video/create-video.use-case";
+import { Controller, ControllerProps } from "@presentation/http/controller";
 
 export class CreateVideoController extends Controller<
   TCreateVideoUseCaseInputDto,

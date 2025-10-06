@@ -1,9 +1,9 @@
-import { VideoProps } from "../../../domain/video/entities/video.entity";
+import { VideoProps } from "@domain/video/entities/video.entity";
 import {
   TLikeVideoUseCaseInputDto,
   TLikeVideoUseCaseOutputDto,
-} from "../../../use-cases/video/like-video.use-case";
-import { Controller, ControllerProps } from "../controller";
+} from "@application/use-cases/video/like-video.use-case";
+import { Controller, ControllerProps } from "@presentation/http/controller";
 
 export class LikeVideoController extends Controller<
   TLikeVideoUseCaseInputDto,

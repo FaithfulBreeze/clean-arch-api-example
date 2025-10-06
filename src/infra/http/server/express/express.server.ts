@@ -1,9 +1,9 @@
-import { HttpExceptionMapper } from "../../../../presentation/http/exceptions/http-exception.mapper";
-import { Controller } from "../../../../presentation/http/controller";
-import { Server } from "../server";
+import { HttpExceptionMapper } from "@presentation/http/exceptions/http-exception.mapper";
+import { Controller } from "@presentation/http/controller";
+import { Server } from "@infra/http/server/server";
 import express, { Application } from "express";
-import { DomainException } from "../../../../domain/exceptions/domain.exception";
-import { ApplicationException } from "../../../../use-cases/exceptions/application.exception";
+import { DomainException } from "@domain/exceptions/domain.exception";
+import { ApplicationException } from "@application/use-cases/exceptions/application.exception";
 
 export class ExpressServer implements Server {
   private app: Application;
