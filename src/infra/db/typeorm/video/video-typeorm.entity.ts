@@ -1,5 +1,5 @@
 import { Column, Entity, PrimaryColumn } from "typeorm";
-import { VideoProps } from "../../../../domain/video/entities/video.entity";
+import { VideoProps } from "@domain/video/entities/video.entity";
 
 @Entity()
 export class VideoTypeormEntity implements VideoProps {

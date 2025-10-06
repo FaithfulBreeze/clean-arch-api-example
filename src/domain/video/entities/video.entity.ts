@@ -1,5 +1,5 @@
 import { randomUUID } from "crypto";
-import { BadInputException } from "../../../domain/exceptions/bad-input.exception";
+import { BadInputException } from "@domain/exceptions/bad-input.exception";
 
 export interface VideoProps {
   id: string;

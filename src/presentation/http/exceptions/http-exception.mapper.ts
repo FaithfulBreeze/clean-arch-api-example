@@ -1,9 +1,9 @@
-import { BadInputException } from "../../../domain/exceptions/bad-input.exception";
-import { DomainException } from "../../../domain/exceptions/domain.exception";
-import { ApplicationException } from "../../../use-cases/exceptions/application.exception";
-import { HttpError } from "../http-error";
-import { ConflictException } from "../../../use-cases/exceptions/conflict.exception";
-import { NotFoundException } from "../../../use-cases/exceptions/not-found.exception";
+import { BadInputException } from "@domain/exceptions/bad-input.exception";
+import { DomainException } from "@domain/exceptions/domain.exception";
+import { ApplicationException } from "@application/use-cases/exceptions/application.exception";
+import { HttpError } from "@presentation/http/http-error";
+import { ConflictException } from "@application/use-cases/exceptions/conflict.exception";
+import { NotFoundException } from "@application/use-cases/exceptions/not-found.exception";
 
 export class HttpExceptionMapper {
   static toHttpError(

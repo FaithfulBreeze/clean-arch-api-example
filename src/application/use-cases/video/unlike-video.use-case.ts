@@ -1,7 +1,7 @@
-import { VideoRepository } from "../../domain/video/repository/video-repository";
-import { UseCase } from "../use-case";
-import { NotFoundException } from "../exceptions/not-found.exception";
-import { Video } from "../../domain/video/entities/video.entity";
+import { VideoRepository } from "@domain/video/repository/video-repository";
+import { UseCase } from "@application/use-cases/use-case";
+import { NotFoundException } from "@application/use-cases/exceptions/not-found.exception";
+import { Video } from "@domain/video/entities/video.entity";
 
 export type TUnlikeVideoUseCaseInputDto = {
   id: string;

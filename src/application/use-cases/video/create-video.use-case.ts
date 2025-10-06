@@ -1,7 +1,7 @@
-import { Video } from "../../domain/video/entities/video.entity";
-import { VideoRepository } from "../../domain/video/repository/video-repository";
-import { ConflictException } from "../exceptions/conflict.exception";
-import { UseCase } from "../use-case";
+import { Video } from "@domain/video/entities/video.entity";
+import { VideoRepository } from "@domain/video/repository/video-repository";
+import { ConflictException } from "@application/use-cases/exceptions/conflict.exception";
+import { UseCase } from "@application/use-cases/use-case";
 
 export type TCreateVideoUseCaseInputDto = {
   title: string;

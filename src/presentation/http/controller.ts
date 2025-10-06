@@ -1,4 +1,4 @@
-import { UseCase } from "../../use-cases/use-case";
+import { UseCase } from "@application/use-cases/use-case";
 
 export interface ControllerProps<
   UseCaseInputDto = unknown,

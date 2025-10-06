@@ -1,8 +1,8 @@
-import { Video } from "../../../../domain/video/entities/video.entity";
-import { VideoRepository } from "../../../../domain/video/repository/video-repository";
+import { Video } from "@domain/video/entities/video.entity";
+import { VideoRepository } from "@domain/video/repository/video-repository";
 import { Repository } from "typeorm";
-import { VideoTypeormMapper } from "./video-typeorm.mapper";
-import { VideoTypeormEntity } from "./video-typeorm.entity";
+import { VideoTypeormMapper } from "@infra/db/typeorm/video/video-typeorm.mapper";
+import { VideoTypeormEntity } from "@infra/db/typeorm/video/video-typeorm.entity";
 
 export class VideoTypeormRepository extends VideoRepository {
   constructor(private readonly repository: Repository<VideoTypeormEntity>) {

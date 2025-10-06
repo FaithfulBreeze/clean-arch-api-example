@@ -1,9 +1,9 @@
-import { VideoProps } from "src/domain/video/entities/video.entity";
+import { VideoProps } from "@domain/video/entities/video.entity";
 import {
   TFindVideoByIdUseCaseInputDto,
   TFindVideoByIdUseCaseOutputDto,
-} from "../../../use-cases/video/find-video-by-id.use-case";
-import { Controller, ControllerProps } from "../controller";
+} from "@application/use-cases/video/find-video-by-id.use-case";
+import { Controller, ControllerProps } from "@presentation/http/controller";
 
 export class FindVideoByIdController extends Controller<
   TFindVideoByIdUseCaseInputDto,

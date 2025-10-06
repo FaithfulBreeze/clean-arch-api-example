@@ -1,4 +1,4 @@
-import { ApplicationException } from "./application.exception";
+import { ApplicationException } from "@application/use-cases/exceptions/application.exception";
 
 export class NotFoundException extends ApplicationException {
   constructor(message: string) {

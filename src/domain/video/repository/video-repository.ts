@@ -1,4 +1,4 @@
-import { Video } from "../entities/video.entity";
+import { Video } from "@domain/video/entities/video.entity";
 
 export abstract class VideoRepository {
   abstract save(video: Video): Promise<void>;
