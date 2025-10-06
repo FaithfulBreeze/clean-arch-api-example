@@ -7,7 +7,7 @@ export interface ControllerProps<
   path: string;
   method: "GET" | "POST" | "PATCH" | "DELETE";
   handler: UseCase<UseCaseInputDto, UseCaseOutputDto>;
-  middlewares?: Function[]
+  middlewares?: Function[];
 }
 
 export abstract class Controller<

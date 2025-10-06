@@ -8,7 +8,7 @@ import { MissingPropertyException } from "@application/use-cases/exceptions/miss
 
 export class HttpExceptionMapper {
   static toHttpError(
-    exception: DomainException | ApplicationException
+    exception: DomainException | ApplicationException,
   ): HttpError {
     if (exception.name === MissingPropertyException.name)
       return new HttpError({ message: exception.message, status: 400 });

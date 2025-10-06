@@ -23,7 +23,7 @@ export class ExpressServer implements Server {
       this.app[controller.props.method.toLowerCase()](
         controller.props.path,
         ...this.buildMiddlewares(controller.props.middlewares),
-        this.buildHandler(controller)
+        this.buildHandler(controller),
       );
     }
   }

@@ -18,13 +18,13 @@ export class UploadVideoUseCase extends UseCase<
 > {
   constructor(
     private readonly videoRepository: VideoRepository,
-    private readonly storage: Storage
+    private readonly storage: Storage,
   ) {
     super();
   }
 
   async execute(
-    input: TUploadVideoUseCaseInputDto
+    input: TUploadVideoUseCaseInputDto,
   ): Promise<TUploadVideoUseCaseOutputDto> {
     if (!input.file)
       throw new MissingPropertyException("Missing property: file");

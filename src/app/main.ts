@@ -37,7 +37,7 @@ const bootstrap = async () => {
   await datasource.initialize();
 
   const videoRepository = new VideoTypeormRepository(
-    datasource.getRepository(VideoTypeormEntity)
+    datasource.getRepository(VideoTypeormEntity),
   );
 
   const createVideoUseCase = new CreateVideoUseCase(videoRepository);
@@ -47,7 +47,7 @@ const bootstrap = async () => {
   const unlikeVideoUseCase = new UnlikeVideoUseCase(videoRepository);
   const uploadVideoUseCase = new UploadVideoUseCase(
     videoRepository,
-    vercelStorage
+    vercelStorage,
   );
 
   const createVideoController = new CreateVideoController({

@@ -27,14 +27,14 @@ export class Video {
       throw new BadInputException("Missing title property.");
     if (this.props.title.length > 15)
       throw new BadInputException(
-        "Video title length should be less or equal 15."
+        "Video title length should be less or equal 15.",
       );
 
     if (!this.props.subtitle)
       throw new BadInputException("Missing subtitle property.");
     if (this.props.subtitle.length > 15)
       throw new BadInputException(
-        "Video subtitle length should be less or equal 45."
+        "Video subtitle length should be less or equal 45.",
       );
   }
 
@@ -69,7 +69,7 @@ export class Video {
   public decreaseLikeCount() {
     if (this.props.likes <= 0)
       throw new BadInputException(
-        "Like count can not be set as a negative value."
+        "Like count can not be set as a negative value.",
       );
     this.props.likes--;
   }

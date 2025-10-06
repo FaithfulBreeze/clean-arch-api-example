@@ -14,7 +14,7 @@ export class VercelStorage extends Storage {
       access: "public",
       token: this.token,
       multipart: true,
-      addRandomSuffix: true
+      addRandomSuffix: true,
     });
 
     return url;
