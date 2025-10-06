@@ -4,11 +4,14 @@ import { ApplicationException } from "@application/use-cases/exceptions/applicat
 import { HttpError } from "@presentation/http/http-error";
 import { ConflictException } from "@application/use-cases/exceptions/conflict.exception";
 import { NotFoundException } from "@application/use-cases/exceptions/not-found.exception";
+import { MissingPropertyException } from "@application/use-cases/exceptions/missing-property.exception";
 
 export class HttpExceptionMapper {
   static toHttpError(
-    exception: DomainException | ApplicationException,
+    exception: DomainException | ApplicationException
   ): HttpError {
+    if (exception.name === MissingPropertyException.name)
+      return new HttpError({ message: exception.message, status: 400 });
     if (exception.name === BadInputException.name)
       return new HttpError({ message: exception.message, status: 400 });
     if (exception.name === ConflictException.name)
