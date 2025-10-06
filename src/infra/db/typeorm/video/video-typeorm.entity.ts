@@ -12,6 +12,9 @@ export class VideoTypeormEntity implements VideoProps {
   @Column({ type: "varchar" })
   subtitle: string;
 
+  @Column({ type: "varchar" })
+  url: string;
+
   @Column({ type: "int" })
   likes: number;
 }

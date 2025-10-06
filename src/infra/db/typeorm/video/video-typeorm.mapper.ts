@@ -8,6 +8,7 @@ export class VideoTypeormMapper {
     ormEntity.title = video.title;
     ormEntity.subtitle = video.subtitle;
     ormEntity.likes = video.likes;
+    ormEntity.url = video.url
     return ormEntity;
   }
 
@@ -17,6 +18,7 @@ export class VideoTypeormMapper {
       title: ormVideo.title,
       subtitle: ormVideo.subtitle,
       likes: ormVideo.likes,
+      url: ormVideo.url
     });
   }
 }
