@@ -1,9 +1,12 @@
+import { HttpExceptionMapper } from "../../../../presentation/http/exceptions/http-exception.mapper";
 import { Controller } from "../../../../presentation/http/controller";
 import { Server } from "../server";
-import Fastify from "fastify";
+import Fastify, { FastifyInstance } from "fastify";
+import { DomainException } from "../../../../domain/exceptions/domain.exception";
+import { ApplicationException } from "../../../../use-cases/exceptions/application.exception";
 
 export class FastifyServer implements Server {
-  private app;
+  private app: FastifyInstance;
 
   constructor() {
     this.app = Fastify();
@@ -21,11 +24,20 @@ export class FastifyServer implements Server {
           try {
             const { body, params } = request;
             const { response, status } = await controller.handle(body, params);
-            return response;
-          } catch (error) {
-            const status = error.status || 500;
-            const message = error.message || "Internal server error";
-            return { status, message };
+            return reply.status(status).send(response);
+          } catch (error: any) {
+            if (
+              !(error instanceof DomainException) &&
+              !(error instanceof ApplicationException)
+            ) {
+              console.error("Unexpected error:", error?.message);
+            }
+
+            const httpError = HttpExceptionMapper.toHttpError(error);
+            const status = httpError.props.status;
+            const message = httpError.props.message;
+
+            return reply.status(status).send({ status, message });
           }
         },
       );
