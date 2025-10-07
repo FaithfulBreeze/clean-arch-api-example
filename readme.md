@@ -3,8 +3,6 @@
 A **Clean Architecture** backend example for managing videos with **CRUD operations, likes/unlikes, and file uploads**, built with **Node.js, TypeScript, Express/Fastify, TypeORM, and Vercel Storage**.  
 Designed to be **framework-agnostic, testable, and maintainable**, following strict separation of concerns.
 
----
-
 ## 🏗 Architecture Overview
 
 This project follows **Clean Architecture** principles, dividing the code into clear layers:
